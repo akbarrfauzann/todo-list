@@ -29,8 +29,8 @@ const Todolist = () => {
   };
 
   return (
-    <div className="container bg-slate-600 p-8 mt-10 flex flex-col items-center max-w-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 text-center text-white font-mono">To do List</h1>
+    <div className="container bg-slate-600 p-4 sm:p-8 mt-6 sm:mt-10 flex flex-col items-center max-w-xl mx-auto">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-white font-mono">To do List</h1>
       <div className="w-full max-w-md">
         <Form createTodo={createTodo} />
         {todoValue.map((todo, index) => (todo.isEditing ? <Edit key={index} editTodo={editTask} task={todo} /> : <Todo key={index} task={todo} editTodo={editTodo} deleteTodo={deleteTodo} toggleComplete={toggleComplete} />))}
